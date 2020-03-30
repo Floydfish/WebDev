@@ -1,0 +1,25 @@
+h1, h2 {
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: Helvetica;
+  }
+  
+  h2 {
+    font-family: Garamond;
+  }
+  
+  table {
+    border: 1px solid black;
+    margin: auto;
+  }
+  
+  thead {
+    background-color: lightgray;
+  }
+  
+  body {
+    background-color: #f4f6f6;
+  }
+  

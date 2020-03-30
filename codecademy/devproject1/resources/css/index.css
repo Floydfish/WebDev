@@ -1,0 +1,21 @@
+.banner {
+    background-color: #4d00ff;
+    color: white;
+    margin-top: 75px;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#small-penguin {
+    height: 200px;
+    width: 200px;
+}
+
+#peguinner {
+    color: #4d00ff;
+    font-size: 100px;
+}
+
+.bold {
+    font-weight: 900;
+}
