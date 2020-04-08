@@ -1,6 +1,6 @@
 // All valid credit card numbers
 const valid1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8]
-const validx = [4, 5, 3, 9, 6, 8, 9, 8, 8, 7, 7, 0, 5, 7, 9, 8]  
+// const validx = [4, 5, 3, 9, 6, 8, 9, 8, 8, 7, 7, 0, 5, 7, 9, 8]  
 const valid2 = [5, 5, 3, 5, 7, 6, 6, 7, 6, 8, 7, 5, 1, 4, 3, 9]
 const valid3 = [3, 7, 1, 6, 1, 2, 0, 1, 9, 9, 8, 5, 2, 3, 6]
 const valid4 = [6, 0, 1, 1, 1, 4, 4, 3, 4, 0, 6, 8, 2, 9, 0, 5]
@@ -37,18 +37,30 @@ function validateCred(array) {
                 checkNumber += array[i]*2 - 9;
                 i--;
             } else {
-                checkNumber += array[i];
+                checkNumber += array[i]*2;
                 i--;
             }
-            console.log(checkNumber);
         }
     }
-    return checkNumber;
-    // return ((checkNumber*9%10) === 0);
+    return ((checkNumber*9%10) === 0);
 }
 
-console.log(validateCred(valid1));
+console.log(validateCred(invalid1));
 
+function findInvalidCards(nestedArray) {
+    let validCards = []
+    let invalidCards = []
+    for (let k = 0; k < nestedArray.length; k++) {
+        if (validateCred(nestedArray[k])) {
+            validCards.push(nestedArray[k]);
+        } else {
+            invalidCards.push(nestedArray[k]);
+        }
+    }
+    return invalidCards;
+}
+
+console.log(findInvalidCards(batch));
 
 
 
