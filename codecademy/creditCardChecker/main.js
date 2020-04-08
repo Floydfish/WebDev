@@ -45,7 +45,10 @@ function validateCred(array) {
     return ((checkNumber*9%10) === 0);
 }
 
+// console.log(validateCred(invalid1));
+console.log(validateCred(valid1));
 console.log(validateCred(invalid1));
+
 
 function findInvalidCards(nestedArray) {
     let validCards = []
@@ -60,7 +63,54 @@ function findInvalidCards(nestedArray) {
     return invalidCards;
 }
 
-console.log(findInvalidCards(batch));
+console.log(findInvalidCards([valid1, valid2, valid3, valid4, valid5]));// Shouldn't print anything
+console.log(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5])); // Should print all of the numbers
+
+console.log(findInvalidCards(batch)); 
+
+function idInvalidCardCompanies (nestedArrayCompanies) {
+    let nestedArray2 = []
+    nestedArray2 = findInvalidCards(nestedArrayCompanies);
+    let companies = [];
+    for (let a = 0; a < nestedArray2.length; a++) {
+        switch (nestedArray2[a][0]) {
+            case 3:
+                companies.push('Amex (American Express)');
+                break;
+            case 4:
+                companies.push('Visa');
+                break;
+            case 5:
+                companies.push('Mastercard');
+                break;
+            case 6:
+                companies.push('Discover');
+                break;
+            default:
+                companies.push('Company not found');
+        }
+    }
+    let uniqueCompanies = []
+    let flag = false;
+    for (let c = 0; c < companies.length; c++) {
+        for (let d = -1; d < uniqueCompanies.length; d++) {
+            if (companies[c] === uniqueCompanies[d]) {
+                flag = true;
+                break;
+            }                     
+        }
+        if (!flag) {
+            uniqueCompanies.push(companies[c])
+        }
+    }
+    return uniqueCompanies;
+}
+
+console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
+console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
+console.log(idInvalidCardCompanies(batch)); // Find out which companies have mailed out invalid cards
+
+
 
 
 
