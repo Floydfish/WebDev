@@ -1,0 +1,134 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    color: seashell;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    align-items: center;
+    z-index: 1;
+    background-color: black;  
+}
+
+header img {
+    height: 50px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+nav {
+    text-align: right;
+    flex-grow: 1;
+}
+
+nav span {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+/* main */
+
+.main {
+    padding-top: 69px;
+    width: 1200px;
+    margin: auto;
+}
+
+#mission {
+    height: 700px;
+    background-image: url('https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg');
+    opacity: 0.9;
+}
+
+#mission .content {
+    background-color: black;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+}
+
+/* Store */
+
+#store {
+    width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.item img {
+    height: 200px;
+    width: 300px;
+    display: block;
+    padding: 5px;
+    margin: 10px;
+}
+
+.item span {
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#locations {
+    background-image: url('https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg');
+    height: 500px;
+    width: 1200px;
+    margin: auto;
+    padding-top: 70px;
+}
+
+#locations .flex-container {
+    margin: auto;
+}
+
+#locations h2 {
+    padding: 0px;
+    margin: 10px;
+}
+
+.location {
+    background-color: black;
+    opacity: 1;
+    margin: 5px 20px;
+    padding: 10px;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location h3 {
+    padding: 10px;
+}
+
+/* contact */
+#contact {
+    height: 200px;
+}
+
+
+/* footer  */
+
+footer {
+    text-align: left;
+    padding: 20px;
+}
